@@ -16,18 +16,24 @@ Untuk menggunakan program Partition Downloader yang telah disesuaikan dalam baha
    git clone https://github.com/rwfqi/DownParCS.git
    ```
 
-4. Atur URL dan Konfigurasi:
+4. Atur URL dan Konfigurasi.
    Buka proyek menggunakan lingkungan pengembangan C# (misalnya, Visual Studio atau Visual Studio Code).
    Temukan dan buka file sumber kode (.cs) dari proyek yang diunduh.
    Ganti nilai variabel url dengan URL file yang ingin Anda unduh.
    Sesuaikan nilai variabel numParts dengan jumlah bagian yang diinginkan untuk pembagian file.
+    Contoh:
+    ```C#
+    string url = "https://filebin.net/ad88bjrttizzumkr/kenanganterindah.mp3";
+    int numParts = 3;
+    string destFile = "";
+    ```
    
-5. Eksekusi Program:
+6. Eksekusi Program:
    Jalankan program melalui lingkungan pengembangan C# Anda dengan menggunakan
    ```cmd
    path/to/your/directory dotnet run
    ```
-6. Tambahan:
+7. Tambahan:
    Jika anda ingin menghapus partisi file setelah file telah digabungkan, anda dapat menambahkan
    ```C#
    File.Delete(inputFile);
