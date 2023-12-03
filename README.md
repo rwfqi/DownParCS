@@ -13,7 +13,7 @@ Untuk menggunakan program Partition Downloader yang telah disesuaikan dalam baha
    ```
 3. Gunakan perintah berikut untuk mengunduh program dari repositori GitHub:
    ```cmd
-   git clone https://github.com/yourusername/your-repository.git
+   git clone https://github.com/rwfqi/DownParCS.git
    ```
 
 4. Atur URL dan Konfigurasi:
