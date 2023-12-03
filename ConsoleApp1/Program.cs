@@ -12,7 +12,7 @@ class Program
 {
     static void Main()
     {
-        string url = "https://filebin.net/ad88bjrttizzumkr/kenanganterindah.mp3";
+        string url = "";
         int numParts = 3;
         string destFile = "";
 
