@@ -1,5 +1,6 @@
 # DownParCS
-
+Partition Downloader dengan menggunakan bahasa C#
+Program ini memungkinkan Anda mengunduh file dari URL yang diberikan, membaginya menjadi beberapa partisi, dan menggabungkannya kembali menjadi satu file.
 
 Untuk menggunakan program Partition Downloader yang telah disesuaikan dalam bahasa C#, ikuti langkah-langkah di bawah ini:
 
@@ -26,4 +27,27 @@ Untuk menggunakan program Partition Downloader yang telah disesuaikan dalam baha
    ```cmd
    path/to/your/directory dotnet run
    ```
-   
+6. Tambahan:
+   Jika anda ingin menghapus partisi file setelah file telah digabungkan, anda dapat menambahkan
+   ```C#
+   File.Delete(inputFile);
+   ```
+   di bagian
+   ```C#
+   static void CombineFiles(string[] inputFiles, string outputFile, string originalExtension)
+    {
+        Console.WriteLine("Combining files...");
+        using (FileStream outputStream = new FileStream($"{outputFile}{originalExtension}", FileMode.Create))
+        {
+            foreach (string inputFile in inputFiles)
+            {
+                byte[] fileData = File.ReadAllBytes(inputFile);
+                outputStream.Write(fileData, 0, fileData.Length);
+                // <- Masukkan dibagian sini
+            }
+            
+        }
+        Console.WriteLine($"Files combined: {outputFile}{originalExtension}");
+    }
+   ```
+Dibuat Oleh: Rifqi Ramadhani Hidayat
