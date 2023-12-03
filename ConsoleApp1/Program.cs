@@ -12,7 +12,7 @@ class Program
 {
     static void Main()
     {
-        string url = "";
+        string url = "https://filebin.net/uuxal39yhb5g1ulv/seb5.txt";
         int numParts = 3;
         string destFile = "";
 
