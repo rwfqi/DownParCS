@@ -7,11 +7,11 @@ Untuk menggunakan program Partition Downloader yang telah disesuaikan dalam baha
 
 2. Buka terminal atau command prompt.
    Pindah ke direktori tempat Anda ingin menyimpan program dengan menggunakan perintah cd.
-   ```terminal
+   ```cmd
    cd path/to/your/directory
    ```
 3. Gunakan perintah berikut untuk mengunduh program dari repositori GitHub:
-   ```terminal
+   ```cmd
    git clone https://github.com/yourusername/your-repository.git
    ```
 
@@ -23,7 +23,7 @@ Untuk menggunakan program Partition Downloader yang telah disesuaikan dalam baha
    
 5. Eksekusi Program:
    Jalankan program melalui lingkungan pengembangan C# Anda dengan menggunakan
-   ```terminal
+   ```cmd
    path/to/your/directory dotnet run
    ```
    
