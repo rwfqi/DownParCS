@@ -23,7 +23,7 @@ Untuk menggunakan program Partition Downloader yang telah disesuaikan dalam baha
    Sesuaikan nilai variabel numParts dengan jumlah bagian yang diinginkan untuk pembagian file.
     Contoh:
     ```C#
-    string url = "https://filebin.net/ad88bjrttizzumkr/kenanganterindah.mp3";
+    string url = "https://filebin.net/z32p9c0y9voqxl61/lec16.txt";
     int numParts = 3;
     string destFile = "";
     ```
