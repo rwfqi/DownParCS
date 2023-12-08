@@ -34,7 +34,7 @@ Untuk menggunakan program Partition Downloader yang telah disesuaikan dalam baha
    path/to/your/directory dotnet run
    ```
 7. Tambahan:
-   Jika anda ingin menghapus partisi file setelah file telah digabungkan, anda dapat menambahkan
+   Jika anda ingin menyimpan partisi file setelah file telah digabungkan, anda dapat menghapus:
    ```C#
    File.Delete(inputFile);
    ```
@@ -49,7 +49,7 @@ Untuk menggunakan program Partition Downloader yang telah disesuaikan dalam baha
             {
                 byte[] fileData = File.ReadAllBytes(inputFile);
                 outputStream.Write(fileData, 0, fileData.Length);
-                // <- Masukkan dibagian sini
+                File.Delete(inputFile); // <- Hapus bagian ini
             }
             
         }
