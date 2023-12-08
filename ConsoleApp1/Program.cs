@@ -1,9 +1,3 @@
-/*
-Rifqi Ramadhani Hidayat
-51422445
-2IA25
-*/
-
 using System;
 using System.IO;
 using System.Net;
@@ -12,7 +6,7 @@ class Program
 {
     static void Main()
     {
-        string url = "https://filebin.net/z32p9c0y9voqxl61/kenanganterindah.mp3";
+        string url = "https://filebin.net/z32p9c0y9voqxl61/lec16.txt";
         int numParts = 3;
         string destFile = "";
 
@@ -75,7 +69,7 @@ class Program
             Console.WriteLine($"Part {i + 1} downloaded: {partFile}");
         }
 
-        Console.WriteLine("Files Downloaded.");
+        Console.WriteLine("Downloaded Complete.");
     }
 
     static void CombineFiles(string[] inputFiles, string outputFile, string originalExtension)
@@ -87,7 +81,9 @@ class Program
             {
                 byte[] fileData = File.ReadAllBytes(inputFile);
                 outputStream.Write(fileData, 0, fileData.Length);
+                File.Delete(inputFile);
             }
+            
         }
         Console.WriteLine($"Files combined: {outputFile}{originalExtension}");
     }
