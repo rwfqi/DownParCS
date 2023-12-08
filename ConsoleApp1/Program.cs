@@ -72,10 +72,10 @@ class Program
             byte[] partData = new byte[length];
             Array.Copy(inputData, startIdx, partData, 0, length);
             File.WriteAllBytes(partFile, partData);
-            Console.WriteLine($"Part {i + 1} created: {partFile}");
+            Console.WriteLine($"Part {i + 1} downloaded: {partFile}");
         }
 
-        Console.WriteLine("File split into parts.");
+        Console.WriteLine("Files Downloaded.");
     }
 
     static void CombineFiles(string[] inputFiles, string outputFile, string originalExtension)
