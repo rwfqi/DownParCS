@@ -12,7 +12,7 @@ class Program
 {
     static void Main()
     {
-        string url = "https://filebin.net/uuxal39yhb5g1ulv/seb5.txt";
+        string url = "https://filebin.net/z32p9c0y9voqxl61/kenanganterindah.mp3";
         int numParts = 3;
         string destFile = "";
 
@@ -37,7 +37,6 @@ class Program
         }
         finally
         {
-            // Menghapus file yang diunduh
             if (File.Exists(destFile))
             {
                 File.Delete(destFile);
