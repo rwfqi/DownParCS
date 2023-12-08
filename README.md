@@ -24,8 +24,6 @@ Untuk menggunakan program Partition Downloader yang telah disesuaikan dalam baha
     Contoh:
     ```C#
     string url = "https://filebin.net/z32p9c0y9voqxl61/lec16.txt";
-    int numParts = 3;
-    string destFile = "";
     ```
    
 6. Eksekusi Program:
@@ -34,26 +32,10 @@ Untuk menggunakan program Partition Downloader yang telah disesuaikan dalam baha
    path/to/your/directory dotnet run
    ```
 7. Tambahan:
-   Jika anda ingin menyimpan partisi file setelah file telah digabungkan, anda dapat menghapus:
+   Jika anda ingin menghapus file partisi setelah file telah digabungkan, anda dapat mengubah nilai keepPartition menjadi false:
    ```C#
-   File.Delete(inputFile);
+   bool keepPartition = true; <-- ubah jadi false.
+   bool removePartition = true;
    ```
-   di bagian
-   ```C#
-   static void CombineFiles(string[] inputFiles, string outputFile, string originalExtension)
-    {
-        Console.WriteLine("Combining files...");
-        using (FileStream outputStream = new FileStream($"{outputFile}{originalExtension}", FileMode.Create))
-        {
-            foreach (string inputFile in inputFiles)
-            {
-                byte[] fileData = File.ReadAllBytes(inputFile);
-                outputStream.Write(fileData, 0, fileData.Length);
-                File.Delete(inputFile); // <- Hapus bagian ini
-            }
-            
-        }
-        Console.WriteLine($"Files combined: {outputFile}{originalExtension}");
-    }
-   ```
+
 Dibuat Oleh: Rifqi Ramadhani Hidayat
